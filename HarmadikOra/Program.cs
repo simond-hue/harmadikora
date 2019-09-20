@@ -35,6 +35,21 @@ namespace HarmadikOra
             return max;
         }
 
+        static int Min(int[] tomb)
+        {
+            int min = tomb[0];
+
+            for (int i = 1; i < tomb.Length; i++)
+            {
+                if (tomb[i] < min)
+                {
+                    min = tomb[i];
+                }
+            }
+
+            return min;
+        }
+
         static void Main(string[] args) 
         {
             Console.Write("Adja meg az elemszámot: ");
@@ -43,6 +58,7 @@ namespace HarmadikOra
             var tomb = Input(darabszam);
 
             Console.WriteLine("A legnagyobb elem: " + Max(tomb));
+            Console.WriteLine("A legkisebb elem: " + Min(tomb));
             Console.ReadKey();
         }
     }
