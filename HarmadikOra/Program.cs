@@ -10,7 +10,7 @@ namespace HarmadikOra
     {
         static void Main(string[] args) 
         {
-            Console.WriteLine("XDDDDDDDDDDDDDDDDDDDDDDDDD");
+            Console.WriteLine("XDDDDDDDDDDDDDDDDDDDDDDDD");
             Console.ReadKey();
         }
     }
