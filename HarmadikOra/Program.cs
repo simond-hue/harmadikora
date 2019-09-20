@@ -52,14 +52,25 @@ namespace HarmadikOra
 
         static void Main(string[] args) 
         {
-            Console.Write("Adja meg az elemszámot: ");
-            int darabszam = Convert.ToInt32(Console.ReadLine());
-
-            var tomb = Input(darabszam);
-
-            Console.WriteLine("A legnagyobb elem: " + Max(tomb));
-            Console.WriteLine("A legkisebb elem: " + Min(tomb));
-            Console.ReadKey();
+            try
+            {
+                Console.Write("Adja meg az elemszámot: ");
+                int darabszam = Convert.ToInt32(Console.ReadLine());
+                int[] tomb = Input(darabszam);
+                Console.WriteLine("A legnagyobb elem: " + Max(tomb));
+                Console.WriteLine("A legkisebb elem: " + Min(tomb));
+                Console.ReadKey();
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Bemeneti hiba!");
+                Console.ReadKey();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hiba!");
+                Console.ReadKey();
+            }
         }
     }
 }
